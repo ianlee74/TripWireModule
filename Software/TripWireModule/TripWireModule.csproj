@@ -43,8 +43,14 @@
   </PropertyGroup>
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
-    <ProjectReference Include="..\TripWireModule_41\TripWireModule_41.csproj" />
-    <ProjectReference Include="..\TripWireModule_42\TripWireModule_42.csproj" />
+    <ProjectReference Include="..\TripWireModule_41\TripWireModule_41.csproj">
+      <Project>{327B5639-3C38-49D6-BF20-FE7534FF0ED6}</Project>
+      <Name>TripWireModule_41</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TripWireModule_42\TripWireModule_42.csproj">
+      <Project>{60006866-E402-4355-BEAC-BFB6B56B51B6}</Project>
+      <Name>TripWireModule_42</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="GadgeteerHardware.xml" />
