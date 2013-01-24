@@ -945,6 +945,11 @@
 <wire x1="-2.54" y1="-6.1722" x2="-2.54" y2="-3.0988" width="0.127" layer="21"/>
 <wire x1="-2.54" y1="6.1976" x2="-2.54" y2="3.2258" width="0.127" layer="21"/>
 </package>
+<package name="SOLDER-JUNCTION">
+<smd name="1" x="-0.4318" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="2" x="0.4318" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<text x="-2.54" y="-2.54" size="1.27" layer="25">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="SPADE-TERMINAL">
@@ -980,6 +985,12 @@
 <wire x1="-5.08" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
 </symbol>
+<symbol name="SOLDER-JUNCTION">
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
+<pin name="P$2" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
+<wire x1="-2.6162" y1="1.524" x2="2.4638" y2="1.524" width="0.254" layer="94" curve="-180"/>
+<text x="-3.302" y="-2.032" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="SPADE-TERMINAL">
@@ -1014,6 +1025,22 @@
 <connect gate="G$1" pin="P$7" pad="7"/>
 <connect gate="G$1" pin="P$8" pad="8"/>
 <connect gate="G$1" pin="P$9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SOLDER-JUNCTION">
+<gates>
+<gate name="G$1" symbol="SOLDER-JUNCTION" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOLDER-JUNCTION">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1672,6 +1699,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="R19" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R20" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
+<part name="LED_EN" library="SoftDust" deviceset="SOLDER-JUNCTION" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1732,6 +1760,9 @@ http://ianlee.info</text>
 <instance part="R19" gate="G$1" x="43.18" y="17.78" rot="R270"/>
 <instance part="R20" gate="G$1" x="38.1" y="12.7"/>
 <instance part="R21" gate="G$1" x="48.26" y="27.94"/>
+<instance part="LED_EN" gate="G$1" x="40.64" y="88.9" smashed="yes">
+<attribute name="NAME" x="34.798" y="86.868" size="1.27" layer="95"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1747,11 +1778,6 @@ http://ianlee.info</text>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="73.66" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
 <label x="25.4" y="73.66" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="15.24" y1="91.44" x2="27.94" y2="91.44" width="0.1524" layer="91"/>
-<label x="15.24" y="91.44" size="1.778" layer="95"/>
-<wire x1="27.94" y1="91.44" x2="30.48" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
@@ -1782,6 +1808,11 @@ http://ianlee.info</text>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
 <label x="139.7" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED_EN" gate="G$1" pin="P$1"/>
+<wire x1="33.02" y1="88.9" x2="25.4" y2="88.9" width="0.1524" layer="91"/>
+<label x="25.4" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -1931,10 +1962,6 @@ http://ianlee.info</text>
 <label x="25.4" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="30.48" y1="91.44" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
-<label x="35.56" y="91.44" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="53.34" x2="25.4" y2="53.34" width="0.1524" layer="91"/>
 <label x="25.4" y="53.34" size="1.778" layer="95"/>
@@ -1963,6 +1990,11 @@ http://ianlee.info</text>
 <pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="154.94" y1="93.98" x2="139.7" y2="93.98" width="0.1524" layer="91"/>
 <label x="139.7" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LED_EN" gate="G$1" pin="P$2"/>
+<wire x1="48.26" y1="88.9" x2="53.34" y2="88.9" width="0.1524" layer="91"/>
+<label x="48.26" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">
