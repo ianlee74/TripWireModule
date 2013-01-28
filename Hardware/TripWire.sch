@@ -907,15 +907,15 @@
 <library name="SoftDust">
 <packages>
 <package name="SPADE-TERMINAL">
-<pad name="P$1" x="0" y="2.54" drill="1.5" shape="square"/>
-<pad name="P$2" x="0" y="7.62" drill="1.5" shape="square"/>
-<wire x1="-1.3462" y1="1.143" x2="-1.3208" y2="1.143" width="0.127" layer="21"/>
-<wire x1="-1.3208" y1="1.143" x2="1.3462" y2="1.143" width="0.127" layer="21"/>
-<wire x1="1.3462" y1="1.143" x2="1.3462" y2="8.9662" width="0.127" layer="21"/>
-<wire x1="1.3462" y1="8.9662" x2="-1.3208" y2="8.9662" width="0.127" layer="21"/>
-<wire x1="-1.3208" y1="8.9662" x2="-1.3208" y2="1.143" width="0.127" layer="21"/>
-<text x="-3.175" y="9.525" size="1.27" layer="21">&gt;name</text>
-<smd name="P$3" x="0" y="5.08" dx="2.4" dy="2.1" layer="1" rot="R90"/>
+<pad name="P$1" x="0" y="-2.54" drill="1.5" shape="square"/>
+<pad name="P$2" x="0" y="2.54" drill="1.5" shape="square"/>
+<wire x1="-1.3462" y1="-3.937" x2="-1.3208" y2="-3.937" width="0.127" layer="21"/>
+<wire x1="-1.3208" y1="-3.937" x2="1.3462" y2="-3.937" width="0.127" layer="21"/>
+<wire x1="1.3462" y1="-3.937" x2="1.3462" y2="3.8862" width="0.127" layer="21"/>
+<wire x1="1.3462" y1="3.8862" x2="-1.3208" y2="3.8862" width="0.127" layer="21"/>
+<wire x1="-1.3208" y1="3.8862" x2="-1.3208" y2="-3.937" width="0.127" layer="21"/>
+<text x="-3.175" y="4.445" size="1.27" layer="21">&gt;name</text>
+<smd name="P$3" x="0" y="0" dx="2.4" dy="2.1" layer="1" rot="R90"/>
 </package>
 <package name="2X5_1.27MM">
 <wire x1="-2.5" y1="6.2" x2="2.5" y2="6.2" width="0.127" layer="21"/>
