@@ -1636,6 +1636,61 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </deviceset>
 </devicesets>
 </library>
+<library name="solpad">
+<description>&lt;b&gt;Solder Pads/Test Points&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="LSP11">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt;
+drill 1.1 mm</description>
+<wire x1="-1.27" y1="0.254" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.143" y1="0.254" x2="0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-1.143" y1="-0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="-0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="-0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<pad name="MP" x="0" y="0" drill="1.1176" diameter="2.159" shape="octagon"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.254" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LSP">
+<wire x1="-1.016" y1="2.032" x2="1.016" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="0" x2="1.016" y2="2.032" width="0.254" layer="94"/>
+<circle x="0" y="1.016" radius="1.016" width="0.4064" layer="94"/>
+<text x="-1.27" y="2.921" size="1.778" layer="95">&gt;NAME</text>
+<pin name="MP" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LSP11" prefix="LSP">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt;
+drill 1.1 mm</description>
+<gates>
+<gate name="1" symbol="LSP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LSP11">
+<connects>
+<connect gate="1" pin="MP" pad="MP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1700,6 +1755,15 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="R20" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
 <part name="LED_EN" library="SoftDust" deviceset="SOLDER-JUNCTION" device=""/>
+<part name="P2" library="solpad" deviceset="LSP11" device=""/>
+<part name="P4" library="solpad" deviceset="LSP11" device=""/>
+<part name="P6" library="solpad" deviceset="LSP11" device=""/>
+<part name="GND" library="solpad" deviceset="LSP11" device=""/>
+<part name="3V3" library="solpad" deviceset="LSP11" device=""/>
+<part name="P1" library="solpad" deviceset="LSP11" device=""/>
+<part name="P3" library="solpad" deviceset="LSP11" device=""/>
+<part name="P5" library="solpad" deviceset="LSP11" device=""/>
+<part name="P7" library="solpad" deviceset="LSP11" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1710,12 +1774,12 @@ http://ianlee.info</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
-<instance part="GND1" gate="1" x="45.72" y="101.6"/>
-<instance part="V1" gate="+5V" x="48.26" y="116.84"/>
-<instance part="V2" gate="G$1" x="15.24" y="116.84"/>
-<instance part="X1" gate="G$1" x="30.48" y="109.22" smashed="yes">
-<attribute name="NAME" x="27.686" y="117.348" size="1.27" layer="95"/>
-<attribute name="VALUE" x="20.828" y="99.568" size="1.27" layer="96"/>
+<instance part="GND1" gate="1" x="55.88" y="104.14"/>
+<instance part="V1" gate="+5V" x="58.42" y="119.38"/>
+<instance part="V2" gate="G$1" x="25.4" y="119.38"/>
+<instance part="X1" gate="G$1" x="40.64" y="111.76" smashed="yes">
+<attribute name="NAME" x="37.846" y="119.888" size="1.27" layer="95"/>
+<attribute name="VALUE" x="30.988" y="102.108" size="1.27" layer="96"/>
 </instance>
 <instance part="LOGO1" gate="G$1" x="10.16" y="7.62"/>
 <instance part="U$1" gate="G$1" x="119.38" y="109.22"/>
@@ -1763,16 +1827,45 @@ http://ianlee.info</text>
 <instance part="LED_EN" gate="G$1" x="40.64" y="88.9" smashed="yes">
 <attribute name="NAME" x="34.798" y="86.868" size="1.27" layer="95"/>
 </instance>
+<instance part="P2" gate="1" x="66.04" y="114.3" smashed="yes" rot="R270">
+<attribute name="NAME" x="69.596" y="114.173" size="1.778" layer="95"/>
+</instance>
+<instance part="P4" gate="1" x="66.04" y="111.76" smashed="yes" rot="R270">
+<attribute name="NAME" x="69.596" y="111.633" size="1.778" layer="95"/>
+</instance>
+<instance part="P6" gate="1" x="66.04" y="109.22" smashed="yes" rot="R270">
+<attribute name="NAME" x="69.596" y="108.839" size="1.778" layer="95"/>
+</instance>
+<instance part="GND" gate="1" x="66.04" y="106.68" smashed="yes" rot="R270">
+<attribute name="NAME" x="69.85" y="106.553" size="1.778" layer="95"/>
+</instance>
+<instance part="3V3" gate="1" x="20.32" y="116.84" smashed="yes" rot="R90">
+<attribute name="NAME" x="17.526" y="117.983" size="1.778" layer="95" rot="R180"/>
+</instance>
+<instance part="P1" gate="1" x="20.32" y="114.3" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.97" y="113.919" size="1.778" layer="95"/>
+</instance>
+<instance part="P3" gate="1" x="20.32" y="111.76" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.716" y="111.633" size="1.778" layer="95"/>
+</instance>
+<instance part="P5" gate="1" x="20.32" y="109.22" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.97" y="109.347" size="1.778" layer="95"/>
+</instance>
+<instance part="P7" gate="1" x="20.32" y="106.68" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.97" y="106.553" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="3V3" class="1">
 <segment>
-<wire x1="15.24" y1="114.3" x2="20.32" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="V2" gate="G$1" pin="VCC"/>
 <pinref part="X1" gate="G$1" pin="P$1"/>
-<label x="15.24" y="114.3" size="1.778" layer="95"/>
+<label x="25.4" y="116.84" size="1.778" layer="95"/>
+<pinref part="3V3" gate="1" pin="MP"/>
+<wire x1="25.4" y1="116.84" x2="30.48" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="116.84" x2="25.4" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="1"/>
@@ -1817,9 +1910,11 @@ http://ianlee.info</text>
 </net>
 <net name="GND" class="1">
 <segment>
-<wire x1="45.72" y1="104.14" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="106.68" x2="50.8" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="X1" gate="G$1" pin="P$10"/>
+<pinref part="GND" gate="1" pin="MP"/>
+<wire x1="63.5" y1="106.68" x2="55.88" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="P$1"/>
@@ -1858,7 +1953,7 @@ http://ianlee.info</text>
 </net>
 <net name="+5V" class="1">
 <segment>
-<wire x1="48.26" y1="114.3" x2="40.64" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="116.84" x2="50.8" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="V1" gate="+5V" pin="+5V"/>
 <pinref part="X1" gate="G$1" pin="P$2"/>
 </segment>
@@ -1866,8 +1961,9 @@ http://ianlee.info</text>
 <net name="PIN3" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="P$3"/>
-<wire x1="20.32" y1="111.76" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
-<label x="15.24" y="111.76" size="1.778" layer="95"/>
+<wire x1="30.48" y1="114.3" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
+<label x="25.4" y="114.3" size="1.778" layer="95"/>
+<pinref part="P1" gate="1" pin="MP"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -1878,8 +1974,9 @@ http://ianlee.info</text>
 <net name="PIN4" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="P$4"/>
-<wire x1="40.64" y1="111.76" x2="48.26" y2="111.76" width="0.1524" layer="91"/>
-<label x="43.18" y="111.76" size="1.778" layer="95"/>
+<wire x1="50.8" y1="114.3" x2="63.5" y2="114.3" width="0.1524" layer="91"/>
+<label x="53.34" y="114.3" size="1.778" layer="95"/>
+<pinref part="P2" gate="1" pin="MP"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
@@ -1890,8 +1987,9 @@ http://ianlee.info</text>
 <net name="PIN5" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="P$5"/>
-<wire x1="20.32" y1="109.22" x2="15.24" y2="109.22" width="0.1524" layer="91"/>
-<label x="15.24" y="109.22" size="1.778" layer="95"/>
+<label x="25.4" y="111.76" size="1.778" layer="95"/>
+<pinref part="P3" gate="1" pin="MP"/>
+<wire x1="22.86" y1="111.76" x2="30.48" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -1902,8 +2000,9 @@ http://ianlee.info</text>
 <net name="PIN7" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="P$7"/>
-<wire x1="20.32" y1="106.68" x2="15.24" y2="106.68" width="0.1524" layer="91"/>
-<label x="15.24" y="106.68" size="1.778" layer="95"/>
+<label x="25.4" y="109.22" size="1.778" layer="95"/>
+<pinref part="P5" gate="1" pin="MP"/>
+<wire x1="22.86" y1="109.22" x2="30.48" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
@@ -1914,8 +2013,9 @@ http://ianlee.info</text>
 <net name="PIN9" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="P$9"/>
-<wire x1="20.32" y1="104.14" x2="15.24" y2="104.14" width="0.1524" layer="91"/>
-<label x="15.24" y="104.14" size="1.778" layer="95"/>
+<label x="25.4" y="106.68" size="1.778" layer="95"/>
+<pinref part="P7" gate="1" pin="MP"/>
+<wire x1="22.86" y1="106.68" x2="30.48" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R20" gate="G$1" pin="1"/>
@@ -1926,8 +2026,9 @@ http://ianlee.info</text>
 <net name="PIN6" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="P$6"/>
-<wire x1="40.64" y1="109.22" x2="48.26" y2="109.22" width="0.1524" layer="91"/>
-<label x="43.18" y="109.22" size="1.778" layer="95"/>
+<wire x1="50.8" y1="111.76" x2="63.5" y2="111.76" width="0.1524" layer="91"/>
+<label x="53.34" y="111.76" size="1.778" layer="95"/>
+<pinref part="P4" gate="1" pin="MP"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
@@ -1938,8 +2039,9 @@ http://ianlee.info</text>
 <net name="PIN8" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="P$8"/>
-<wire x1="40.64" y1="106.68" x2="48.26" y2="106.68" width="0.1524" layer="91"/>
-<label x="43.18" y="106.68" size="1.778" layer="95"/>
+<wire x1="50.8" y1="109.22" x2="63.5" y2="109.22" width="0.1524" layer="91"/>
+<label x="53.34" y="109.22" size="1.778" layer="95"/>
+<pinref part="P6" gate="1" pin="MP"/>
 </segment>
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
