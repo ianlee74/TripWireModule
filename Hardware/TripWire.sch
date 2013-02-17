@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -168,10 +168,10 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="+5V" prefix="SUPPLY">
+<deviceset name="VCC" prefix="SUPPLY">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="+5V" symbol="+05V" x="0" y="0"/>
+<gate name="G$1" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -181,10 +181,10 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="VCC" prefix="SUPPLY">
+<deviceset name="+5V" prefix="SUPPLY">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="G$1" symbol="VCC" x="0" y="0"/>
+<gate name="+5V" symbol="+05V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -907,6 +907,7 @@
 <library name="SoftDust">
 <packages>
 <package name="SPADE-TERMINAL">
+<description>0.2mm spaced pads for connecting a spade terminal.</description>
 <pad name="P$1" x="0" y="-2.54" drill="1.5" shape="square"/>
 <pad name="P$2" x="0" y="2.54" drill="1.5" shape="square"/>
 <wire x1="-1.3462" y1="-3.937" x2="-1.3208" y2="-3.937" width="0.127" layer="21"/>
@@ -918,6 +919,7 @@
 <smd name="P$3" x="0" y="0" dx="2.4" dy="2.1" layer="1" rot="R90"/>
 </package>
 <package name="2X5_1.27MM">
+<description>2x5 pins, 1.27mm pitch "Gadgeteer Socket"</description>
 <wire x1="-2.5" y1="6.2" x2="2.5" y2="6.2" width="0.127" layer="21"/>
 <wire x1="2.5" y1="-6.2" x2="-2.5" y2="-6.2" width="0.127" layer="21"/>
 <wire x1="-2.5" y1="-1.9" x2="-0.5" y2="-1.9" width="0.127" layer="21"/>
@@ -946,14 +948,16 @@
 <wire x1="-2.54" y1="6.1976" x2="-2.54" y2="3.2258" width="0.127" layer="21"/>
 </package>
 <package name="SOLDER-JUNCTION">
+<description>Solder junction used for when needing to optionally enable a part of a circuit via soldering two pads together.</description>
 <smd name="1" x="-0.4318" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 <smd name="2" x="0.4318" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 <text x="-2.54" y="-2.54" size="1.27" layer="25">&gt;NAME</text>
 </package>
 <package name="8-UFDFN">
+<description>8-position UFDFN package IC</description>
 <wire x1="-0.68" y1="-0.88" x2="0.72" y2="-0.88" width="0.127" layer="21"/>
 <wire x1="0.72" y1="0.87" x2="-0.44" y2="0.87" width="0.127" layer="21"/>
-<text x="-1.52" y="0.36" size="0.6096" layer="21">1</text>
+<text x="-1.2025" y="0.995" size="0.6096" layer="21">1</text>
 <wire x1="-0.68" y1="-0.88" x2="-0.68" y2="-0.8" width="0.127" layer="21"/>
 <wire x1="0.72" y1="-0.88" x2="0.72" y2="-0.8" width="0.127" layer="21"/>
 <wire x1="0.724" y1="0.872" x2="0.72" y2="0.868" width="0.127" layer="21"/>
@@ -968,7 +972,7 @@
 <smd name="P$3" x="-0.616" y="-0.2" dx="0.42" dy="0.1778" layer="1"/>
 <smd name="P$2" x="-0.616" y="0.2" dx="0.42" dy="0.1778" layer="1"/>
 <smd name="P$1" x="-0.616" y="0.6" dx="0.42" dy="0.1778" layer="1"/>
-<text x="-1.4" y="1.2" size="0.8128" layer="25">&gt;name</text>
+<text x="-1.4" y="-1.6575" size="0.8128" layer="25">&gt;name</text>
 </package>
 </packages>
 <symbols>
@@ -1162,6 +1166,7 @@
 </devices>
 </deviceset>
 <deviceset name="VESD05A8A-HNH-GS08">
+<description>VESD05A8A-HNH-GS088-UFDFN - TVS Diode Array for ESD Protection</description>
 <gates>
 <gate name="G$1" symbol="TVS-DIODE-8-POS" x="-5.08" y="-5.08"/>
 </gates>
@@ -1833,7 +1838,7 @@ drill 1.1 mm</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.254" drill="0.381">
+<class number="0" name="default" width="0.1524" drill="0.254">
 <clearance class="0" value="0.2032"/>
 </class>
 <class number="1" name="power" width="0" drill="0">
@@ -1844,7 +1849,6 @@ drill 1.1 mm</description>
 <parts>
 <part name="FRAME2" library="frames" deviceset="A5L-LOC" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="V1" library="supply2" deviceset="+5V" device=""/>
 <part name="V2" library="supply2" deviceset="VCC" device=""/>
 <part name="X1" library="SoftDust" deviceset="GADGETEER-SOCKET" device=""/>
 <part name="LOGO1" library="Logo" deviceset="LOGO-OSHW-FILL" device="X0200-NT"/>
@@ -1861,32 +1865,32 @@ drill 1.1 mm</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="SV1" library="con-lstb" deviceset="MA03-2" device=""/>
-<part name="D1" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603"/>
+<part name="SV1" library="con-lstb" deviceset="MA03-2" device="" value="Header"/>
+<part name="D1" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green 10mA"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
-<part name="D2" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603"/>
+<part name="D2" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green 10mA"/>
 <part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
-<part name="D3" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603"/>
+<part name="D3" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green 10mA"/>
 <part name="R7" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R9" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
-<part name="D4" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603"/>
+<part name="D4" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green 10mA"/>
 <part name="R10" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R11" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R12" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
-<part name="D5" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603"/>
+<part name="D5" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green 10mA"/>
 <part name="R13" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R14" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R15" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
-<part name="D6" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603"/>
+<part name="D6" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green 10mA"/>
 <part name="R16" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R17" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R18" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
-<part name="D7" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603"/>
+<part name="D7" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green 10mA"/>
 <part name="R19" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="R20" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="100"/>
 <part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="33"/>
@@ -1902,6 +1906,7 @@ drill 1.1 mm</description>
 <part name="P7" library="solpad" deviceset="LSP11" device=""/>
 <part name="VESD05A8A-HNH-GS08" library="SoftDust" deviceset="VESD05A8A-HNH-GS08" device="8-UFDFN_TVS-DIODE-ARRAY"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="SUPPLY1" library="supply2" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1913,7 +1918,6 @@ http://ianlee.info</text>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
 <instance part="GND1" gate="1" x="55.88" y="106.68"/>
-<instance part="V1" gate="+5V" x="58.42" y="121.92"/>
 <instance part="V2" gate="G$1" x="25.4" y="121.92"/>
 <instance part="X1" gate="G$1" x="40.64" y="114.3" smashed="yes">
 <attribute name="NAME" x="37.846" y="122.428" size="1.27" layer="95"/>
@@ -1962,8 +1966,8 @@ http://ianlee.info</text>
 <instance part="R19" gate="G$1" x="43.434" y="15.24" rot="R270"/>
 <instance part="R20" gate="G$1" x="38.354" y="10.16"/>
 <instance part="R21" gate="G$1" x="48.514" y="25.4"/>
-<instance part="LED_EN" gate="G$1" x="160.274" y="111.76" smashed="yes">
-<attribute name="NAME" x="154.432" y="109.728" size="1.27" layer="95"/>
+<instance part="LED_EN" gate="G$1" x="129.794" y="111.76" smashed="yes">
+<attribute name="NAME" x="123.952" y="109.728" size="1.27" layer="95"/>
 </instance>
 <instance part="P2" gate="1" x="63.5" y="116.84" smashed="yes" rot="R270">
 <attribute name="NAME" x="67.056" y="116.713" size="1.778" layer="95"/>
@@ -1977,8 +1981,8 @@ http://ianlee.info</text>
 <instance part="GND" gate="1" x="63.5" y="109.22" smashed="yes" rot="R270">
 <attribute name="NAME" x="67.31" y="109.093" size="1.778" layer="95"/>
 </instance>
-<instance part="3V3" gate="1" x="20.32" y="119.38" smashed="yes" rot="R90">
-<attribute name="NAME" x="17.526" y="120.523" size="1.778" layer="95" rot="R180"/>
+<instance part="3V3" gate="1" x="12.7" y="119.38" smashed="yes" rot="R90">
+<attribute name="NAME" x="9.906" y="120.523" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="P1" gate="1" x="20.32" y="116.84" smashed="yes" rot="R90">
 <attribute name="NAME" x="13.97" y="116.459" size="1.778" layer="95"/>
@@ -1995,7 +1999,8 @@ http://ianlee.info</text>
 <instance part="VESD05A8A-HNH-GS08" gate="G$1" x="40.64" y="96.52" smashed="yes">
 <attribute name="NAME" x="48.26" y="88.9" size="1.6764" layer="95"/>
 </instance>
-<instance part="GND7" gate="1" x="40.64" y="86.36"/>
+<instance part="GND7" gate="1" x="40.64" y="83.82"/>
+<instance part="SUPPLY1" gate="+5V" x="53.34" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -2005,9 +2010,7 @@ http://ianlee.info</text>
 <pinref part="V2" gate="G$1" pin="VCC"/>
 <pinref part="X1" gate="G$1" pin="P$1"/>
 <label x="25.4" y="119.38" size="1.778" layer="95"/>
-<pinref part="3V3" gate="1" pin="MP"/>
 <wire x1="25.4" y1="119.38" x2="30.48" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="119.38" x2="25.4" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="1"/>
@@ -2046,8 +2049,13 @@ http://ianlee.info</text>
 </segment>
 <segment>
 <pinref part="LED_EN" gate="G$1" pin="P$1"/>
-<wire x1="152.654" y1="111.76" x2="145.034" y2="111.76" width="0.1524" layer="91"/>
-<label x="145.034" y="111.76" size="1.778" layer="95"/>
+<wire x1="122.174" y1="111.76" x2="114.554" y2="111.76" width="0.1524" layer="91"/>
+<label x="114.554" y="111.76" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="3V3" gate="1" pin="MP"/>
+<wire x1="15.24" y1="119.38" x2="17.78" y2="119.38" width="0.1524" layer="91"/>
+<label x="15.24" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -2057,6 +2065,8 @@ http://ianlee.info</text>
 <pinref part="X1" gate="G$1" pin="P$10"/>
 <pinref part="GND" gate="1" pin="MP"/>
 <wire x1="60.96" y1="109.22" x2="55.88" y2="109.22" width="0.1524" layer="91"/>
+<junction x="55.88" y="109.22"/>
+<junction x="60.96" y="109.22"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="P$1"/>
@@ -2095,14 +2105,6 @@ http://ianlee.info</text>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
 <pinref part="VESD05A8A-HNH-GS08" gate="G$1" pin="P$9"/>
-<wire x1="40.64" y1="86.36" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="+5V" class="1">
-<segment>
-<wire x1="58.42" y1="119.38" x2="50.8" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="V1" gate="+5V" pin="+5V"/>
-<pinref part="X1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
 <net name="PIN3" class="0">
@@ -2115,6 +2117,7 @@ http://ianlee.info</text>
 <wire x1="10.16" y1="116.84" x2="10.16" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="91.44" x2="33.02" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="VESD05A8A-HNH-GS08" gate="G$1" pin="P$4"/>
+<junction x="22.86" y="116.84"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -2132,6 +2135,7 @@ http://ianlee.info</text>
 <wire x1="73.66" y1="116.84" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="93.98" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="VESD05A8A-HNH-GS08" gate="G$1" pin="P$6"/>
+<junction x="60.96" y="116.84"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
@@ -2149,6 +2153,7 @@ http://ianlee.info</text>
 <wire x1="12.7" y1="93.98" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="114.3" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="VESD05A8A-HNH-GS08" gate="G$1" pin="P$3"/>
+<junction x="22.86" y="114.3"/>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -2166,6 +2171,7 @@ http://ianlee.info</text>
 <wire x1="15.24" y1="96.52" x2="33.02" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="111.76" x2="22.86" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="VESD05A8A-HNH-GS08" gate="G$1" pin="P$2"/>
+<junction x="22.86" y="111.76"/>
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
@@ -2184,6 +2190,7 @@ http://ianlee.info</text>
 <wire x1="33.02" y1="99.06" x2="19.304" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="19.304" y1="99.06" x2="19.304" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="19.304" y1="109.22" x2="22.86" y2="109.22" width="0.1524" layer="91"/>
+<junction x="22.86" y="109.22"/>
 </segment>
 <segment>
 <pinref part="R20" gate="G$1" pin="1"/>
@@ -2201,6 +2208,7 @@ http://ianlee.info</text>
 <wire x1="71.12" y1="96.52" x2="48.26" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="114.3" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="VESD05A8A-HNH-GS08" gate="G$1" pin="P$7"/>
+<junction x="60.96" y="114.3"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
@@ -2218,6 +2226,7 @@ http://ianlee.info</text>
 <wire x1="68.58" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="111.76" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="VESD05A8A-HNH-GS08" gate="G$1" pin="P$8"/>
+<junction x="60.96" y="111.76"/>
 </segment>
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
@@ -2271,8 +2280,8 @@ http://ianlee.info</text>
 </segment>
 <segment>
 <pinref part="LED_EN" gate="G$1" pin="P$2"/>
-<wire x1="167.894" y1="111.76" x2="172.974" y2="111.76" width="0.1524" layer="91"/>
-<label x="167.894" y="111.76" size="1.778" layer="95"/>
+<wire x1="137.414" y1="111.76" x2="142.494" y2="111.76" width="0.1524" layer="91"/>
+<label x="137.414" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -2415,9 +2424,21 @@ http://ianlee.info</text>
 <junction x="66.294" y="33.02"/>
 </segment>
 </net>
+<net name="+5V" class="0">
+<segment>
+<pinref part="X1" gate="G$1" pin="P$2"/>
+<pinref part="SUPPLY1" gate="+5V" pin="+5V"/>
+<wire x1="50.8" y1="119.38" x2="53.34" y2="119.38" width="0.1524" layer="91"/>
+<junction x="53.34" y="119.38"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,25.4,119.38,VCC,3V3,,,,"/>
+<approved hash="115,1,91.971,66.571,FRAME2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
