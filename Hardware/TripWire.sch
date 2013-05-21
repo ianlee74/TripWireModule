@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -279,6 +279,14 @@
 <wire x1="-2.54" y1="-6.1722" x2="-2.54" y2="-3.0988" width="0.127" layer="21"/>
 <wire x1="-2.54" y1="6.1976" x2="-2.54" y2="3.2258" width="0.127" layer="21"/>
 </package>
+<package name="SOT-363">
+<smd name="P$1" x="0" y="0.9425" dx="0.6" dy="0.42" layer="1" rot="R90"/>
+<smd name="P$2" x="0.6435" y="0.949" dx="0.6" dy="0.42" layer="1" rot="R90"/>
+<smd name="P$0" x="-0.65" y="0.949" dx="0.6" dy="0.42" layer="1" rot="R90"/>
+<smd name="P$3" x="-0.65" y="-0.949" dx="0.6" dy="0.42" layer="1" rot="R90"/>
+<smd name="P$4" x="0" y="-0.9425" dx="0.6" dy="0.42" layer="1" rot="R90"/>
+<smd name="P$5" x="0.6435" y="-0.949" dx="0.6" dy="0.42" layer="1" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SPADE-TERMINAL">
@@ -314,6 +322,55 @@
 <wire x1="-5.08" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
 </symbol>
+<symbol name="BAT54SDW-SCHOTTKY-ARRAY">
+<pin name="C2" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+<pin name="A2" x="5.08" y="5.08" visible="off" length="short" rot="R270"/>
+<pin name="AC1" x="-5.08" y="5.08" visible="off" length="short" rot="R270"/>
+<pin name="A1" x="-5.08" y="-5.08" visible="off" length="short" rot="R90"/>
+<pin name="C1" x="0" y="-5.08" visible="off" length="short" rot="R90"/>
+<pin name="AC2" x="5.08" y="-5.08" visible="off" length="short" rot="R90"/>
+<wire x1="-7.62" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-1.27" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-1.27" x2="-4.318" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="-5.842" y1="-2.032" x2="-5.08" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-5.588" y1="-1.016" x2="-4.572" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-0.508" x2="-5.08" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.778" x2="0.762" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.778" x2="-0.762" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-5.842" y1="-2.032" x2="-4.318" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="0.762" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-0.508" x2="0" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.508" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-0.508" y1="-2.032" x2="0" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.032" x2="0.508" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="4.318" y2="2.032" width="0.254" layer="94"/>
+<wire x1="5.842" y1="2.032" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.588" y1="1.016" x2="4.572" y2="1.016" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="0.508" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0.508" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.778" x2="-0.762" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="1.778" x2="0.762" y2="1.016" width="0.254" layer="94"/>
+<wire x1="5.842" y1="2.032" x2="4.318" y2="2.032" width="0.254" layer="94"/>
+<wire x1="0.762" y1="1.016" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="1.016" x2="-0.762" y2="1.016" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0.508" x2="0" y2="0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="0.508" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0.508" y1="2.032" x2="0" y2="2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="2.032" x2="-0.508" y2="2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="0" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="1.016" x2="0" y2="2.032" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="SPADE-TERMINAL">
@@ -348,6 +405,26 @@
 <connect gate="G$1" pin="P$7" pad="7"/>
 <connect gate="G$1" pin="P$8" pad="8"/>
 <connect gate="G$1" pin="P$9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BAT54SDW">
+<gates>
+<gate name="G$1" symbol="BAT54SDW-SCHOTTKY-ARRAY" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-363">
+<connects>
+<connect gate="G$1" pin="A1" pad="P$3"/>
+<connect gate="G$1" pin="A2" pad="P$2"/>
+<connect gate="G$1" pin="AC1" pad="P$0"/>
+<connect gate="G$1" pin="AC2" pad="P$5"/>
+<connect gate="G$1" pin="C1" pad="P$4"/>
+<connect gate="G$1" pin="C2" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5252,6 +5329,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="D14" library="diode" deviceset="BAT54S" device=""/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.01 uF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="U$9" library="SoftDust" deviceset="BAT54SDW" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5375,6 +5453,7 @@ http://ianlee.info</text>
 <instance part="D14" gate="G$1" x="17.78" y="17.78" rot="R90"/>
 <instance part="C7" gate="G$1" x="33.02" y="12.7"/>
 <instance part="GND9" gate="1" x="33.02" y="7.62"/>
+<instance part="U$9" gate="G$1" x="116.84" y="109.22"/>
 </instances>
 <busses>
 </busses>
@@ -5996,4 +6075,10 @@ http://ianlee.info</text>
 </errors>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
