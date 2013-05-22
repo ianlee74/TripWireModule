@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -240,15 +240,15 @@
 <packages>
 <package name="SPADE-TERMINAL">
 <description>0.2mm spaced pads for connecting a spade terminal.</description>
-<pad name="P$1" x="0" y="-2.54" drill="1.5" shape="square"/>
-<pad name="P$2" x="0" y="2.54" drill="1.5" shape="square"/>
-<wire x1="-1.3462" y1="-3.937" x2="-1.3208" y2="-3.937" width="0.127" layer="21"/>
-<wire x1="-1.3208" y1="-3.937" x2="1.3462" y2="-3.937" width="0.127" layer="21"/>
-<wire x1="1.3462" y1="-3.937" x2="1.3462" y2="3.8862" width="0.127" layer="21"/>
+<pad name="P$1" x="0" y="-2.54" drill="1.5" shape="square" stop="no"/>
+<pad name="P$2" x="0" y="2.54" drill="1.5" shape="square" stop="no"/>
+<wire x1="1.3462" y1="-3.8735" x2="1.3462" y2="3.8862" width="0.127" layer="21"/>
 <wire x1="1.3462" y1="3.8862" x2="-1.3208" y2="3.8862" width="0.127" layer="21"/>
-<wire x1="-1.3208" y1="3.8862" x2="-1.3208" y2="-3.937" width="0.127" layer="21"/>
+<wire x1="-1.3208" y1="3.8862" x2="-1.3208" y2="-3.8735" width="0.127" layer="21"/>
 <text x="-3.175" y="4.445" size="1.27" layer="21">&gt;name</text>
-<smd name="P$3" x="0" y="0" dx="2.4" dy="2.1" layer="1" rot="R90"/>
+<rectangle x1="-1.12585" y1="-1.43198125" x2="1.12838125" y2="1.411740625" layer="17"/>
+<rectangle x1="-1.27" y1="-3.81" x2="1.27" y2="3.81" layer="29"/>
+<wire x1="-1.3335" y1="-3.8735" x2="1.3335" y2="-3.8735" width="0.127" layer="21"/>
 </package>
 <package name="2X5_1.27MM">
 <description>2x5 pins, 1.27mm pitch "Gadgeteer Socket"</description>
@@ -292,6 +292,7 @@
 <wire x1="-0.9815" y1="0.65" x2="-1.2025" y2="0.65" width="0.127" layer="21"/>
 <wire x1="-1.2025" y1="0.65" x2="-1.2025" y2="-0.65" width="0.127" layer="21"/>
 <wire x1="-1.2025" y1="-0.65" x2="-0.9815" y2="-0.65" width="0.127" layer="21"/>
+<text x="1.524" y="1.3335" size="0.6096" layer="21" rot="R270">&gt;name</text>
 </package>
 <package name="SOD-523F">
 <smd name="P$1" x="0" y="1" dx="0.8" dy="0.5" layer="1" rot="R90"/>
@@ -6029,4 +6030,10 @@ http://ianlee.info</text>
 </errors>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
