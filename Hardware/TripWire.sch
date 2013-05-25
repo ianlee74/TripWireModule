@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -246,8 +246,8 @@
 <wire x1="1.3462" y1="3.8862" x2="-1.3208" y2="3.8862" width="0.127" layer="21"/>
 <wire x1="-1.3208" y1="3.8862" x2="-1.3208" y2="-3.8735" width="0.127" layer="21"/>
 <text x="-3.175" y="4.445" size="1.27" layer="21">&gt;name</text>
-<rectangle x1="-1.12585" y1="-1.43198125" x2="1.12838125" y2="1.411740625" layer="17"/>
-<rectangle x1="-1.27" y1="-3.81" x2="1.27" y2="3.81" layer="29"/>
+<rectangle x1="-1.12" y1="-1.406578125" x2="1.12838125" y2="1.41" layer="1"/>
+<rectangle x1="-1.27" y1="-3.81" x2="1.27" y2="3.81" layer="29" rot="R180"/>
 <wire x1="-1.3335" y1="-3.8735" x2="1.3335" y2="-3.8735" width="0.127" layer="21"/>
 </package>
 <package name="2X5_1.27MM">
@@ -5515,13 +5515,14 @@ http://ianlee.info</text>
 <wire x1="33.274" y1="63.5" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="63.5" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="63.5" x2="7.874" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="60.96" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="33.274" y1="60.96" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
 <junction x="33.02" y="63.5"/>
 <wire x1="25.4" y1="66.04" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
 <junction x="25.4" y="63.5"/>
-<junction x="33.02" y="60.96"/>
 <pinref part="U$11" gate="G$1" pin="C1"/>
 <junction x="25.4" y="66.04"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<junction x="33.274" y="60.96"/>
 </segment>
 <segment>
 <pinref part="R21" gate="G$1" pin="1"/>
@@ -6030,10 +6031,4 @@ http://ianlee.info</text>
 </errors>
 </schematic>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
