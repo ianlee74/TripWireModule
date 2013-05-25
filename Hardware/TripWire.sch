@@ -5289,9 +5289,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.01 uF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="U$9" library="SoftDust" deviceset="BAT54SDW" device=""/>
-<part name="U$10" library="SoftDust" deviceset="BAT54SDW" device=""/>
-<part name="U$11" library="SoftDust" deviceset="BAT54SDW" device=""/>
+<part name="DA1" library="SoftDust" deviceset="BAT54SDW" device=""/>
+<part name="DA3" library="SoftDust" deviceset="BAT54SDW" device=""/>
+<part name="DA2" library="SoftDust" deviceset="BAT54SDW" device=""/>
 <part name="U$12" library="SoftDust" deviceset="BAT42-SCHOTTKY-DIODE" device=""/>
 <part name="U$13" library="SoftDust" deviceset="BAT42-SCHOTTKY-DIODE" device=""/>
 </parts>
@@ -5410,9 +5410,9 @@ http://ianlee.info</text>
 <instance part="GND8" gate="1" x="33.02" y="40.64"/>
 <instance part="C7" gate="G$1" x="33.02" y="12.7"/>
 <instance part="GND9" gate="1" x="33.02" y="7.62"/>
-<instance part="U$9" gate="G$1" x="93.98" y="63.5"/>
-<instance part="U$10" gate="G$1" x="147.32" y="63.5"/>
-<instance part="U$11" gate="G$1" x="22.86" y="71.12"/>
+<instance part="DA1" gate="G$1" x="93.98" y="63.5"/>
+<instance part="DA3" gate="G$1" x="147.32" y="63.5"/>
+<instance part="DA2" gate="G$1" x="22.86" y="71.12"/>
 <instance part="U$12" gate="G$1" x="17.78" y="20.32"/>
 <instance part="U$13" gate="G$1" x="17.78" y="12.7"/>
 </instances>
@@ -5452,7 +5452,7 @@ http://ianlee.info</text>
 <junction x="91.44" y="93.98"/>
 <junction x="104.14" y="93.98"/>
 <junction x="104.14" y="88.9"/>
-<pinref part="U$9" gate="G$1" pin="C2"/>
+<pinref part="DA1" gate="G$1" pin="C2"/>
 <junction x="91.44" y="68.58"/>
 </segment>
 <segment>
@@ -5466,7 +5466,7 @@ http://ianlee.info</text>
 <wire x1="96.52" y1="58.42" x2="96.52" y2="55.88" width="0.1524" layer="91"/>
 <junction x="96.52" y="55.88"/>
 <junction x="104.14" y="50.8"/>
-<pinref part="U$9" gate="G$1" pin="C1"/>
+<pinref part="DA1" gate="G$1" pin="C1"/>
 <junction x="96.52" y="58.42"/>
 </segment>
 <segment>
@@ -5480,7 +5480,7 @@ http://ianlee.info</text>
 <wire x1="144.78" y1="93.98" x2="132.08" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="68.58" x2="144.78" y2="93.98" width="0.1524" layer="91"/>
 <junction x="144.78" y="93.98"/>
-<pinref part="U$10" gate="G$1" pin="C2"/>
+<pinref part="DA3" gate="G$1" pin="C2"/>
 <junction x="144.78" y="68.58"/>
 </segment>
 <segment>
@@ -5494,7 +5494,7 @@ http://ianlee.info</text>
 <wire x1="149.86" y1="58.42" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
 <junction x="149.86" y="55.88"/>
 <junction x="157.48" y="50.8"/>
-<pinref part="U$10" gate="G$1" pin="C1"/>
+<pinref part="DA3" gate="G$1" pin="C1"/>
 <junction x="149.86" y="58.42"/>
 </segment>
 <segment>
@@ -5506,7 +5506,7 @@ http://ianlee.info</text>
 <wire x1="20.32" y1="99.06" x2="7.874" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="76.2" x2="20.32" y2="99.06" width="0.1524" layer="91"/>
 <junction x="20.32" y="99.06"/>
-<pinref part="U$11" gate="G$1" pin="C2"/>
+<pinref part="DA2" gate="G$1" pin="C2"/>
 <junction x="20.32" y="76.2"/>
 </segment>
 <segment>
@@ -5519,7 +5519,7 @@ http://ianlee.info</text>
 <junction x="33.02" y="63.5"/>
 <wire x1="25.4" y1="66.04" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
 <junction x="25.4" y="63.5"/>
-<pinref part="U$11" gate="G$1" pin="C1"/>
+<pinref part="DA2" gate="G$1" pin="C1"/>
 <junction x="25.4" y="66.04"/>
 <pinref part="R16" gate="G$1" pin="1"/>
 <junction x="33.274" y="60.96"/>
@@ -5556,7 +5556,7 @@ http://ianlee.info</text>
 <wire x1="114.3" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 <junction x="114.3" y="71.12"/>
 <pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="U$9" gate="G$1" pin="A2"/>
+<pinref part="DA1" gate="G$1" pin="A2"/>
 <wire x1="96.52" y1="68.58" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 <junction x="104.14" y="71.12"/>
@@ -5573,7 +5573,7 @@ http://ianlee.info</text>
 <junction x="104.14" y="33.02"/>
 <junction x="114.3" y="33.02"/>
 <junction x="114.3" y="38.1"/>
-<pinref part="U$9" gate="G$1" pin="A1"/>
+<pinref part="DA1" gate="G$1" pin="A1"/>
 <junction x="91.44" y="58.42"/>
 </segment>
 <segment>
@@ -5587,7 +5587,7 @@ http://ianlee.info</text>
 <junction x="157.48" y="71.12"/>
 <junction x="167.64" y="71.12"/>
 <junction x="167.64" y="76.2"/>
-<pinref part="U$10" gate="G$1" pin="A2"/>
+<pinref part="DA3" gate="G$1" pin="A2"/>
 <junction x="149.86" y="68.58"/>
 </segment>
 <segment>
@@ -5601,7 +5601,7 @@ http://ianlee.info</text>
 <junction x="157.48" y="33.02"/>
 <junction x="167.64" y="33.02"/>
 <junction x="167.64" y="38.1"/>
-<pinref part="U$10" gate="G$1" pin="A1"/>
+<pinref part="DA3" gate="G$1" pin="A1"/>
 <junction x="144.78" y="58.42"/>
 </segment>
 <segment>
@@ -5623,7 +5623,7 @@ http://ianlee.info</text>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="25.4" y1="76.2" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
 <junction x="33.02" y="76.2"/>
-<pinref part="U$11" gate="G$1" pin="A2"/>
+<pinref part="DA2" gate="G$1" pin="A2"/>
 <junction x="25.4" y="76.2"/>
 </segment>
 <segment>
@@ -5632,7 +5632,7 @@ http://ianlee.info</text>
 <wire x1="33.02" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="43.18" x2="20.32" y2="66.04" width="0.1524" layer="91"/>
 <junction x="33.02" y="43.18"/>
-<pinref part="U$11" gate="G$1" pin="A1"/>
+<pinref part="DA2" gate="G$1" pin="A1"/>
 <junction x="20.32" y="66.04"/>
 </segment>
 <segment>
@@ -5656,7 +5656,7 @@ http://ianlee.info</text>
 <label x="93.98" y="71.12" size="1.778" layer="95" rot="R90"/>
 <wire x1="93.98" y1="78.74" x2="93.98" y2="68.58" width="0.1524" layer="91"/>
 <junction x="93.98" y="78.74"/>
-<pinref part="U$9" gate="G$1" pin="AC2"/>
+<pinref part="DA1" gate="G$1" pin="AC2"/>
 <junction x="93.98" y="68.58"/>
 </segment>
 </net>
@@ -5672,7 +5672,7 @@ http://ianlee.info</text>
 <label x="91.948" y="53.34" size="1.778" layer="95" rot="R270"/>
 <wire x1="93.98" y1="40.64" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
 <junction x="93.98" y="40.64"/>
-<pinref part="U$9" gate="G$1" pin="AC1"/>
+<pinref part="DA1" gate="G$1" pin="AC1"/>
 <junction x="93.98" y="58.42"/>
 </segment>
 </net>
@@ -5688,7 +5688,7 @@ http://ianlee.info</text>
 <label x="147.32" y="71.12" size="1.778" layer="95" rot="R90"/>
 <wire x1="147.32" y1="78.74" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
 <junction x="147.32" y="78.74"/>
-<pinref part="U$10" gate="G$1" pin="AC2"/>
+<pinref part="DA3" gate="G$1" pin="AC2"/>
 <junction x="147.32" y="68.58"/>
 </segment>
 </net>
@@ -5705,7 +5705,7 @@ http://ianlee.info</text>
 <wire x1="23.114" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="83.82" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
 <junction x="22.86" y="83.82"/>
-<pinref part="U$11" gate="G$1" pin="AC2"/>
+<pinref part="DA2" gate="G$1" pin="AC2"/>
 <junction x="22.86" y="76.2"/>
 <wire x1="22.86" y1="76.2" x2="22.86" y2="78.486" width="0.1524" layer="91"/>
 </segment>
@@ -5742,7 +5742,7 @@ http://ianlee.info</text>
 <label x="147.32" y="53.34" size="1.778" layer="95" rot="R270"/>
 <wire x1="147.32" y1="40.64" x2="147.32" y2="58.42" width="0.1524" layer="91"/>
 <junction x="147.32" y="40.64"/>
-<pinref part="U$10" gate="G$1" pin="AC1"/>
+<pinref part="DA3" gate="G$1" pin="AC1"/>
 <junction x="147.32" y="58.42"/>
 </segment>
 </net>
@@ -5759,7 +5759,7 @@ http://ianlee.info</text>
 <wire x1="23.114" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="50.8" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
 <junction x="22.86" y="50.8"/>
-<pinref part="U$11" gate="G$1" pin="AC1"/>
+<pinref part="DA2" gate="G$1" pin="AC1"/>
 <junction x="22.86" y="66.04"/>
 </segment>
 </net>
