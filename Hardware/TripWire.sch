@@ -5778,6 +5778,14 @@ http://ianlee.info</text>
 <pinref part="D6" gate="G$1" pin="C"/>
 <wire x1="56.134" y1="53.34" x2="43.434" y2="53.34" width="0.1524" layer="91"/>
 <junction x="56.134" y="53.34"/>
+<pinref part="R16" gate="G$1" pin="2"/>
+<pinref part="R17" gate="G$1" pin="2"/>
+<junction x="33.274" y="50.8"/>
+<wire x1="33.274" y1="50.8" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="33.02" y1="50.8" x2="43.434" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="43.434" y1="50.8" x2="43.434" y2="53.34" width="0.1524" layer="91"/>
+<junction x="43.434" y="53.34"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -5904,6 +5912,7 @@ http://ianlee.info</text>
 <junction x="56.134" y="55.88"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <junction x="33.02" y="83.82"/>
+<junction x="43.434" y="86.36"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -6008,18 +6017,6 @@ http://ianlee.info</text>
 <wire x1="30.48" y1="109.22" x2="38.1" y2="109.22" width="0.1524" layer="91"/>
 <junction x="30.48" y="109.22"/>
 <junction x="40.64" y="109.22"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="R16" gate="G$1" pin="2"/>
-<pinref part="R17" gate="G$1" pin="2"/>
-<junction x="33.274" y="50.8"/>
-<wire x1="33.274" y1="50.8" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="50.8" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
-<junction x="43.18" y="53.34"/>
 </segment>
 </net>
 </nets>
