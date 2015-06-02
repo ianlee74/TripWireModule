@@ -3,9 +3,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("GTM.IanLee.TripWireModule")]
-[assembly: AssemblyDescription("Driver for TripWireModule module made by IanLee for Microsoft .NET Gadgeteer")]
+[assembly: AssemblyDescription("Driver for TripWireModule module made by Ian Lee for Microsoft .NET Gadgeteer")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("IanLee")]
+[assembly: AssemblyCompany("Ian Lee")]
 [assembly: AssemblyProduct("TripWireModule")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]

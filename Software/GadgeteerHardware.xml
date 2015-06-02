@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<GadgeteerDefinitions xmlns="http://schemas.microsoft.com/Gadgeteer/2011/Hardware">
+  <ModuleDefinitions>
+    <ModuleDefinition Name="TripWire"
+                  UniqueId="081b90ab-db49-4237-89b7-776958fcb91b"
+                  Manufacturer="Ian Lee"
+                  Description="TripWire module"
+                  InstanceName="extender"
+                  Type="Gadgeteer.Modules.IanLee.TripWire"
+                  ModuleSuppliesPower="false"
+                  Image="Image.jpg"
+                  BoardHeight="27"
+                  BoardWidth="29"
+                  HardwareVersion="1.3"
+                  MinimumGadgeteerCoreVersion="2.43.800"
+                  HelpUrl="http://www.ghielectronics.com/catalog/product/273">
+
+      <Assemblies>
+        <Assembly MFVersion="4.2" Name="GTM.IanLee.TripWire"/>
+        <Assembly MFVersion="4.3" Name="GTM.IanLee.TripWire"/>
+      </Assemblies>
+
+      <Sockets>
+        <Socket Left="14.76" Top="5.46" Orientation="270" ConstructorOrder="1" TypesLabel="">
+          <Types>
+            <Type>X</Type>
+            <Type>Y</Type>
+          </Types>
+          <Pins>
+          </Pins>
+        </Socket>
+      </Sockets>
+
+      <ProvidedSockets>
+        <ProvidedSocket Label="E1" Left="14.76" Top="22" Orientation="270" ConstructorParameter="ExtenderSocketB">
+          <Types>
+            <Type>X</Type>
+            <Type>Y</Type>
+          </Types>
+          <SharedPinMaps>
+          </SharedPinMaps>
+        </ProvidedSocket>
+      </ProvidedSockets>
+
+      <Power>
+        <PowerRequirements Voltage="3.3">
+          <TypicalCurrent>Infinity</TypicalCurrent>
+          <MaximumCurrent>Infinity</MaximumCurrent>
+        </PowerRequirements>
+        <PowerRequirements Voltage="5.0">
+          <TypicalCurrent>Infinity</TypicalCurrent>
+          <MaximumCurrent>Infinity</MaximumCurrent>
+        </PowerRequirements>
+      </Power>
+    </ModuleDefinition>
+  </ModuleDefinitions>
+</GadgeteerDefinitions>
+

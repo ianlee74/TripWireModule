@@ -6,7 +6,7 @@
     <!--VS2010 product version-->
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{327B5639-3C38-49D6-BF20-FE7534FF0ED6}</ProjectGuid>
+    <ProjectGuid>{E27D0140-E895-44E2-A52C-67835487CD54}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Gadgeteer.Modules.IanLee</RootNamespace>

@@ -17,8 +17,8 @@ namespace Gadgeteer.Modules.IanLee
         // The example code shows the recommended code pattern for exposing a property (IsPressed). 
         // The example also uses the recommended code pattern for exposing two events: Pressed and Released. 
         // The triple-slash "///" comments shown will be used in the build process to create an XML file named
-        // GTM.IanLee.$HardwareName$. This file will provide IntelliSense and documentation for the
-        // interface and make it easier for developers to use the $HardwareName$ module.        
+        // GTM.IanLee.TripWireModule. This file will provide IntelliSense and documentation for the
+        // interface and make it easier for developers to use the TripWireModule module.        
 
         // -- CHANGE FOR MICRO FRAMEWORK 4.2 --
         // If you want to use Serial, SPI, or DaisyLink (which includes GTI.SoftwareI2C), you must do a few more steps
